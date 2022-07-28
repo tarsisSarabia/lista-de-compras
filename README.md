@@ -10,7 +10,7 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 
 # Protótipo
-
+https://www.figma.com/file/neAI9M5ccU2ksfGoWAyh6g/lista-de-compras?node-id=2%3A2
 
 
 # Checklist
