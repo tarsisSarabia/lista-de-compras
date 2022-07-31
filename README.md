@@ -6,7 +6,7 @@ visando auxiliar o usuário a ter um acesso fácil e rápido da sua lista de com
 O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 # Endereço de Deploy - GitHub Pages
-
+https://tarsissarabia.github.io/lista-de-compras/
 
 
 # Protótipo
