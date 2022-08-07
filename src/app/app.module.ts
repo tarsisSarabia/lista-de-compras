@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NomeDaListaComponent } from './nome-da-lista/nome-da-lista.component';
-import { PrimeiraListaComponent } from './primeira-lista/primeira-lista.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NomeDaListaComponent,
-    PrimeiraListaComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
