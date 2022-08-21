@@ -4,22 +4,7 @@
 <!-- main -->
 <main>
 <router-outlet>
-   <!-- painel login para usar o property binding para ocultar ou mostrar o botão de login-->
-  <div id="painel-login" class="row"  [hidden]="true">
-    <div class="col s15 m4 offset-m4">
-      <a routerLink="/login">
-        <div
-          id="botao-login"
-          class="card-panel green accent-3 center my-card-button"
-        >
-        <!-- usar o property binding para mudar a propriedade do style-->
-          <span class="white-text flow-text" [style.backgroundColor]="'purple'"> LOGIN </span>
-        </div>
-      </a>
-    </div>
-  </div>
-  <!-- fim painel login -->
-  </router-outlet>
+</router-outlet>
 </main>
 <!-- fim main -->
 
