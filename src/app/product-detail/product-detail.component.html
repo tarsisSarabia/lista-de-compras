@@ -1,0 +1,25 @@
+<div class="container contact">
+  <h5>Produtos</h5>
+  <h6>Dados dos Produtos</h6>
+  <hr />
+  <div class="row">
+    <ul class="collection col s12 offset-m3 m6">
+      <li class="collection-item">
+        <span class="badge left">IDENTIFICADOR</span>{{ this.registration.id }}
+      </li>
+      <li class="collection-item">
+        <span class="badge left">QUANTIDADE</span
+        >{{ this.registration.value | number }}
+      </li>
+      <li class="collection-item">
+        <span class="badge left">PRODUTO</span
+        >{{ this.registration.produto | uppercase }}
+      </li>
+      <li class="collection-item">
+        <span class="badge left">DATA</span>
+        {{ this.registration.date | date: "dd/MM/yyyy" }}
+      </li>
+    </ul>
+  </div>
+</div>
+
