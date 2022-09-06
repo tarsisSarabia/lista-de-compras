@@ -1,0 +1,32 @@
+<div class="container contact">
+  <h5>Lista de Compras</h5>
+  <h6>
+    Segue abaixo a lista dos produtos a serem adquiridos.
+  </h6>
+  <hr />
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <table class="highlight" *ngIf="registrations && registrations!.length > 0">
+        <thead>
+
+          <tr>
+            <th data-field="td-date">Data</th>
+            <th data-field="td-produto">Produto</th>
+            <th data-field="td-quantidade">Quantidade</th>
+          </tr>
+        </thead>
+
+      </table>
+
+      <app-product-panel [value]="this.registrations.length"></app-product-panel>
+
+    </div>
+    </div>
+  <!-- link home -->
+  <div class="row">
+    <div class="col s12 m6 offset-m3 center">
+      <a href="/index.html"> VOLTAR AO MENU PRINCIPAL </a>
+    </div>
+  </div>
+
+</div>
