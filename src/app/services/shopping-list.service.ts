@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Registration } from '../model/registration';
-import { Response } from 'src/app/Response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingListService {
+
 
 private url = 'http://localhost:3000/registrations'
   constructor(private http: HttpClient ) { }
@@ -28,9 +28,9 @@ private url = 'http://localhost:3000/registrations'
     return   this.http.delete<Registration>(`${this.url}/${id}`);
   }
 
-  update(registration:Registration):Observable<Registration>{
-     return this.http.patch<Registration>(this.url, registration );
-
+  update(id: number, registration:Registration):Observable<Registration>{
+      const urlL = `${this.url}/${id}`;
+      return this.http.put<Registration>(urlL, registration );
   }
 
   getProduct(id:number):Observable<Registration[]>{

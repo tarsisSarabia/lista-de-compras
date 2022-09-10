@@ -19,10 +19,10 @@ const routes: Routes = [
   },
   { path: 'cadastrar', component: RegisterProductComponent },
   { path: 'lista', component: ShoppingListComponent },
-  { path: 'lista/detalhes/:id', component: ProductDetailComponent },
+  { path: 'lista/detalhes/:id/', component: ProductDetailComponent },
   { path: 'nova-lista', component: NewListComponent },
   { path: 'nao-autorizado', component: NotauthorizedComponent },
-  { path: 'alterar/:product', component: AlterProductComponent },
+  { path: 'alterar/:id', component: AlterProductComponent },
 ];
 
 @NgModule({

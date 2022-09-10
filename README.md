@@ -6,8 +6,7 @@ visando auxiliar o usuário a ter um acesso fácil e rápido da sua lista de com
 O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 # Endereço de Deploy - GitHub Pages
-
-
+https://tarsissarabia.github.io/lista-de-compras/
 
 # Protótipo
 https://www.figma.com/file/neAI9M5ccU2ksfGoWAyh6g/lista-de-compras?node-id=2%3A2
@@ -29,8 +28,8 @@ https://www.figma.com/file/neAI9M5ccU2ksfGoWAyh6g/lista-de-compras?node-id=2%3A2
 - [X] Desabilitar o botão de submit enquanto o formulário está inválido.
 - [X] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
 - [X] Cadastrar uma entidade no JSON Server.
-- [ ] Apresentar uma lista de dados com a diretiva estrutural ngFor.
-- [ ] Usar a diretiva ngIf
-- [ ] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [X] Apresentar uma lista de dados com a diretiva estrutural ngFor.
+- [X] Usar a diretiva ngIf
+- [X] Formatar a apresentação de dados com Pipes.
+- [X] Build e deploy da aplicação.
 

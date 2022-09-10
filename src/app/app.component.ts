@@ -7,7 +7,7 @@ import * as M from 'materialize-css';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
-  title = 'despesas-mensais-app';
+  title = 'lista-de-compras-app';
   coords: any;
   currentDate: Date;
 

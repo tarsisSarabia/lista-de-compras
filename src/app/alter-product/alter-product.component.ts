@@ -5,7 +5,7 @@ import { Component,  OnInit, ViewChild } from '@angular/core';
  import { ProductPanelComponent } from '../product-panel/product-panel.component';
 import { ShoppingListService } from '../services/shopping-list.service';
 import { ActivatedRoute } from '@angular/router';
-import { filter } from 'rxjs';
+import { concat, concatMap, delay, filter, map, of } from 'rxjs';
 
 @Component({
   selector: 'app-alter-product',
@@ -21,6 +21,8 @@ export class AlterProductComponent implements OnInit {
   id: number=0;
   isSubmitted!: boolean;
   registrations!:Registration[];
+  registration!:Registration;
+
 
   @ViewChild(ProductPanelComponent)
   productPanelComponent!: ProductPanelComponent;
@@ -30,33 +32,28 @@ export class AlterProductComponent implements OnInit {
     text: '',
   };
 
-  constructor(private listService:ShoppingListService, private route: ActivatedRoute ) {
-    this.listService.getAll().subscribe((item)=>{
-      this.registrations=item;
-     });
+  constructor(private route: ActivatedRoute, private listService:ShoppingListService  ) {
 
   }
 
   ngOnInit(): void {
+    this.id  = +this.route.snapshot.paramMap.get('id')!;
     this.registerProductMessage = '';
     Shared.initializeWebStorage();
-    this.nomeProduto = this.route.snapshot.paramMap.get('product')!;
-  }
-
+   }
   async onSubmit() {
-
-    if (this.nomeProduto.length < 3) {
+      if (this.nomeProduto.length < 3) {
       this.registerProductInvalid = true;
       this.registerProductMessage =
         'Opps!!! O produto deve ter pelo menos 3 letras.';
       return;
       }
+      let registration = new Registration(this.nomeProduto, 1 );
 
-      let registration =new Registration(this.nomeProduto, 1 );
-      await this.listService.update(registration).subscribe();
+       await this.listService.update(this.id,registration).subscribe();
 
       this.registerProductInvalid = false;
-       this.registerProductMessage = `Produto ${registration.product} foi alterado com sucesso!`;
+        this.registerProductMessage = `Produto ${registration.product} foi alterado com sucesso!`;
 
       this.nomeProduto = '';
     }

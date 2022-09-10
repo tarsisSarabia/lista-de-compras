@@ -13,7 +13,7 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./land-page.component.css']
 })
 export class LandPageComponent implements OnInit {
-  imageURL: string = '/assets/resources/images/prateleiras.jpg';
+  imageURL: string = 'assets/resources/images/prateleiras.jpg';
   loggedIn = false;
   subscription!: Subscription;
 
@@ -31,9 +31,10 @@ export class LandPageComponent implements OnInit {
   }
 
   getBackgroundImage() {
+
     return {
       'background-image':
-        'linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(' +
+        'linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .2)), url(' +
         this.imageURL +
         ')',
     };

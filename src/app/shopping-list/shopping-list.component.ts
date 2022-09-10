@@ -38,8 +38,9 @@ export class ShoppingListComponent implements OnInit {
 
   }
   onEdit(t: Registration  ) {
-     this.router.navigate(['/alterar/', t.product]);
-   }
+     this.router.navigate(['/alterar/', t?.id]);
+
+  }
 
   onDelete(registration:Registration) {
     let confirmation = window.confirm(

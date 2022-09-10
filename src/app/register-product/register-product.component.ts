@@ -67,7 +67,9 @@ export class RegisterProductComponent implements OnInit {
       this.registerProductMessage = `Produto ${produto} Já existe na sua lista e não foi adicionado novamente!`;
       this.nomeProduto = '';
     }
-
+    this.listService.getAll().subscribe((item)=>{
+      this.registrations=item;
+     });
   }
 
   onResetClick() {

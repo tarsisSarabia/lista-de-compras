@@ -10,7 +10,6 @@ import { WebStorageUtil } from 'src/app/util/web-storage-util';
 })
 export class LoginService {
   private loginSource = new Subject<boolean>();
-  //login$ = this.loginSource.asObservable();
 
   constructor(private router: Router) {}
 
@@ -28,6 +27,5 @@ export class LoginService {
 
   asObservable(): Observable<boolean> {
     return this.loginSource;
-    //return this.loginSource.asObservable()
   }
 }
