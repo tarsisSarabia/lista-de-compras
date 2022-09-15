@@ -7,7 +7,6 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 # Endereço de Deploy - GitHub Pages
 https://tarsissarabia.github.io/lista-de-compras/
-main
 
 # Protótipo
 https://www.figma.com/file/neAI9M5ccU2ksfGoWAyh6g/lista-de-compras?node-id=2%3A2
