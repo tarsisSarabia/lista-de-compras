@@ -1,0 +1,59 @@
+<div class="container contact">
+  <h5>Lista de Compras</h5>
+  <h6>
+    Segue abaixo a lista dos produtos a serem adquiridos.
+  </h6>
+  <hr />
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <table class="highlight" *ngIf="registrations && registrations!.length > 0">
+        <thead>
+
+          <tr>
+            <th data-field="td-date">Data</th>
+            <th data-field="td-produto">Produto</th>
+            <th data-field="td-quantidade">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of registrations" (dblclick)="ondblClickItem(t)" >
+            <td>{{ t.date | date: "dd/MM/yyyy HH:mm:ss" }}</td>
+            <td>{{ t.product | titlecase}}</td>
+            <td>{{ t.quantity | number }}</td>
+            <td class="right">
+              <a
+                ><i class="material-icons my-icon-size" (click)="onEdit(t)"
+                  >edit</i
+                ></a
+              >
+              <a
+                ><i
+                  class="material-icons my-icon-size"
+                  (click)="onDelete(t)"
+                  >delete</i
+                ></a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <app-product-panel [value]="this.registrations.length"></app-product-panel>
+
+    </div>
+    </div>
+    <div *ngIf="registrations && registrations!.length == 0">
+      <div class="row">
+        <div class="center-align">
+          <i class="col s12 material-icons large blue-grey-text text-darken-2">assignment</i>
+          <span class="col s12 flow-text">Não possui produtos cadastrados!</span>
+        </div>
+      </div>
+    </div>
+  <!-- link home -->
+  <div class="row">
+    <div class="col s12 m6 offset-m3 center">
+      <a href="index.html"> VOLTAR AO MENU PRINCIPAL </a>
+    </div>
+  </div>
+</div>

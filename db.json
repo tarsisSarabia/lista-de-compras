@@ -1,0 +1,46 @@
+{
+  "registrations": [
+    {
+      "product": "Rúcula",
+      "quantity": 1,
+      "id": 184,
+      "date": "2022-09-10T01:13:27.534Z"
+    },
+    {
+      "product": "Açúcar",
+      "quantity": 1,
+      "id": 86,
+      "date": "2022-09-13T01:18:06.376Z"
+    },
+    {
+      "product": "Detergente",
+      "quantity": 1,
+      "id": 894,
+      "date": "2022-09-15T22:42:49.524Z"
+    },
+    {
+      "product": "Carne",
+      "quantity": 1,
+      "id": 300,
+      "date": "2022-09-10T20:48:36.648Z"
+    },
+    {
+      "product": "Azeite",
+      "quantity": 1,
+      "id": 83,
+      "date": "2022-09-10T20:48:43.600Z"
+    },
+    {
+      "product": "Qboa",
+      "quantity": 1,
+      "id": 165,
+      "date": "2022-09-13T01:19:03.553Z"
+    },
+    {
+      "product": "Pão",
+      "quantity": 1,
+      "id": 687,
+      "date": "2022-09-13T01:19:28.046Z"
+    }
+  ]
+}
