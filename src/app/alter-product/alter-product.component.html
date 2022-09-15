@@ -1,0 +1,81 @@
+<app-modal [show]="modal.show" [content]="modal" (closeEvent)="onCloseModal()">
+</app-modal>
+<div class="container contact">
+  <h5>Cadastro de Produtos</h5>
+  <h6>Por favor, adicione o produto que deseja icluir na sua lista de compras! </h6>
+  <hr />
+
+  <div class="row">
+    <div class="col s12">
+      <div
+        id="div-register-product-message"
+        class="card-panel white-text"
+        [hidden]="!this.registerProductMessage"
+        [class.red]="this.registerProductInvalid"
+        [class.blue]="!this.registerProductInvalid"
+      >
+        {{ this.registerProductMessage }}
+      </div>
+    </div>
+    <form class="col s12" #form="ngForm" (submit)="onSubmit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <input
+          id="input-register-product"
+            name="input-register-product"
+            type="text"
+            class="validate"
+            [(ngModel)]="this.nomeProduto"
+            pattern="^(\s?[a-zà-úA-ZÀ-Ú]{3,18}$)"
+            #product="ngModel"
+            required
+          />
+          <label for="input-register-product">Nome do Produto *</label>
+          <div class="red-text" [hidden]="product.valid || product.untouched">
+            Por favor, o produto tem que ter no mínimo 3 letras.
+          </div>
+          <div class="red-text" *ngIf="product.errors?.['required'] && product.touched">
+            Por favor, o nome do produto é obrigatório.
+          </div>
+          <span
+            class="helper-text"
+            data-error="O campo é inválido"
+            data-success="Ok!"
+          ></span>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light amber darken-4" type="submit"
+      [disabled]="!form.valid">
+        Alterar
+        <i class="material-icons right">send</i>
+      </button>
+      <button
+        style="margin-left: 10px"
+        class="btn waves-effect waves-light amber darken-4"
+        type="button"
+        (click)="onResetClick()"
+      >
+        Apagar
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+
+  <p>Nome: {{ this.nomeProduto }}</p>
+
+  <h6>Quantidade de Produtos na Lista:</h6>
+  <app-product-panel
+    #product
+    [value]="this.registrations.length"
+
+  ></app-product-panel>
+  <!-- link home -->
+  <div class="row">
+    <div class="col s12 m6 offset-m3 center">
+      <a href="index.html"> VOLTAR AO MENU PRINCIPAL </a>
+    </div>
+  </div>
+  <!-- link home -->
+</div>
+
+

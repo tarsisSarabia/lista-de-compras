@@ -1,0 +1,43 @@
+<div
+  class="intro green z-depth-1 my-logo-text"
+  [ngStyle]="this.getBackgroundImage()"
+>
+  <h1 class="grey-text text-lighten-5">Lista de Compras</h1>
+  <h4 class="green-text text-darken-1">Tornando sua ida ao mercado mais fácil!!!</h4>
+</div>
+<!-- container -->
+<div class="container about">
+  <!-- painel serviços  -->
+  <div id="painel-servicos" *ngIf="this.loggedIn">
+    <h5>Serviços</h5>
+    <hr />
+    <div class="row">
+      <!-- serviços -->
+      <div class="col s12 m6">
+        <a routerLink="lista">
+          <div class="card-panel amber accent-4 center my-card-button">
+            <span class="white-text flow-text"> Lista de Compras </span>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a routerLink="nova-lista">
+          <div class="card-panel amber accent-4 center my-card-button">
+            <span class="white-text flow-text"> Nova Lista </span>
+          </div>
+        </a>
+      </div>
+      <div class="col s12 m6">
+        <a routerLink="cadastrar">
+          <div class="card-panel amber accent-4 center my-card-button">
+            <span class="white-text flow-text"> Cadastrar Produtos </span>
+          </div>
+        </a>
+      </div>
+      <!-- serviços -->
+    </div>
+    <!-- fim linha -->
+  </div>
+  <!-- fim painel serviços -->
+ </div>
+<!-- fim container -->
